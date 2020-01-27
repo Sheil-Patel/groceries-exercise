@@ -28,14 +28,23 @@ products = [
 print(products)
 # pprint(products)
 
-# TODO: write some Python code here to produce the desired output
 
-#--------------
-#THERE ARE 20 PRODUCTS:
-#--------------
+
+products_count = len(products)
+print("--------------")
+print("THERE ARE " + str(products_count) + " PRODUCTS")
+print("--------------")
+
+for p in products:
+    #print(p["name"])
+    #print(" ... " + p["name"] + " ($4.99)")
+    price_usd = "(${0:.2f})".format(p["price"])
+    print(" ... " + p["name"] + price_usd)
+
 # + All-Seasons Salt ($4.99)
 # + Chocolate Fudge Layer Cake ($18.50)
 # + Chocolate Sandwich Cookies ($3.50)
+
 # + Cut Russet Potatoes Steam N' Mash ($4.25)
 # + Dry Nose Oil ($21.99)
 # + Fresh Scent Dishwasher Cleaner ($4.99)
